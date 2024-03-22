@@ -2,6 +2,6 @@ streamlit
 numpy
 pandas
 joblib
-cv2
+opencv-python
 tempfile
 matplotlib
