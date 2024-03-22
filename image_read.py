@@ -38,8 +38,8 @@ if nav == "Upload and predict":
 
 	st.subheader("Prediction")
 	if st.button("Show me"):
-		my_model = joblib.load("./my_model.joblib")
 		fixed_image = fix_image(path)
+		my_model = joblib.load("./my_model.joblib")
 		prediction = my_model.predict(fixed_image)		
 		st.success(f"Your number is: {prediction}")
 		st.write("Your picture was: ")
