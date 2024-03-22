@@ -2,5 +2,5 @@ streamlit
 numpy
 pandas
 joblib
-opencv-python
+opencv-python-headless
 matplotlib
