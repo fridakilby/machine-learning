@@ -15,7 +15,7 @@ def fix_image(url):
     inverted_i = cv2.bitwise_not(smaller_i)
     flatten_i = inverted_i.flatten()
     reshaped_i = flatten_i.reshape(1,-1)
-    scaler = joblib.load("scaler_model.joblib")
+    scaler = joblib.load("./scaler_model.joblib")
     scaled_i = scaler.transform(reshaped_i)
     return scaled_i
 
@@ -39,7 +39,7 @@ if nav == "Upload and predict":
 	st.subheader("Prediction")
 	if st.button("Show me"):
 		fixed_image = fix_image(path)
-		my_model = joblib.load("my_model.joblib")
+		my_model = joblib.load("./my_model.joblib")
 		prediction = my_model.predict(fixed_image)		
 		st.success(f"Your number is: {prediction}")
 		st.write("Your picture was: ")
