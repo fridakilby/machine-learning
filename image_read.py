@@ -15,11 +15,11 @@ def fix_image(url):
     inverted_i = cv2.bitwise_not(smaller_i)
     flatten_i = inverted_i.flatten()
     reshaped_i = flatten_i.reshape(1,-1)
-    scaler = joblib.load("/scaler_model.joblib")
+    scaler = joblib.load("data/scaler_model.joblib")
     scaled_i = scaler.transform(reshaped_i)
     return scaled_i
 
-my_model = joblib.load("/my_model.joblib")
+my_model = joblib.load("data/my_model.joblib")
 
 nav = st.sidebar.radio("Navigation Menu",["Upload and predict"])
 
