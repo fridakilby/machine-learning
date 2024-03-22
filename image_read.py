@@ -19,7 +19,7 @@ def fix_image(url):
     scaled_i = scaler.transform(reshaped_i)
     return scaled_i
 
-my_model = joblib.load("./my_model.joblib")
+
 
 nav = st.sidebar.radio("Navigation Menu",["Upload and predict"])
 
@@ -38,6 +38,7 @@ if nav == "Upload and predict":
 
 	st.subheader("Prediction")
 	if st.button("Show me"):
+		my_model = joblib.load("./my_model.joblib")
 		fixed_image = fix_image(path)
 		prediction = my_model.predict(fixed_image)		
 		st.success(f"Your number is: {prediction}")
