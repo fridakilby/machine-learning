@@ -4,3 +4,4 @@ pandas
 joblib
 opencv-python-headless
 matplotlib
+pickle
