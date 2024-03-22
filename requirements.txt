@@ -1,9 +1,7 @@
-numpy
-matplotlib
-pandas
-sklearn
-cv2
-joblib
 streamlit
-os
+numpy
+pandas
+joblib
+cv2
 tempfile
+matplotlib
