@@ -4,3 +4,6 @@ pandas
 sklearn
 cv2
 joblib
+streamlit
+os
+tempfile
