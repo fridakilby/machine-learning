@@ -1,1 +1,4 @@
 my_model.joblib filter=lfs diff=lfs merge=lfs -text
+*.ext filter=lfs diff=lfs merge=lfs -text
+class_svc_model.joblib filter=lfs diff=lfs merge=lfs -text
+scaler_model.joblib filter=lfs diff=lfs merge=lfs -text
